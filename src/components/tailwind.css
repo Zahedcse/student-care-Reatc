@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-edit {
+    @apply bg-green-600 
+    px-3 
+    py-2 
+    rounded-md 
+    text-center 
+    text-white
+     hover:scale-110 
+     hover:bg-emerald-500;
+  }
+  .btn-delete {
+    @apply bg-red-700 
+    px-3 
+    py-2 
+    ml-2 
+    rounded-md 
+    text-center 
+    text-white 
+    hover:scale-110 
+    hover:bg-rose-700;
+  }
+  .input {
+    @apply bg-gray-50 
+    border 
+    border-gray-300 
+    text-gray-900 
+    text-sm rounded-lg 
+    focus:ring-blue-500 
+    focus:border-blue-500 
+    block w-full 
+    p-2.5 
+    dark:bg-gray-600 
+    dark:border-gray-500 
+    dark:placeholder-gray-400 
+    dark:text-white;
+  }
+}
