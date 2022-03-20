@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import 'flowbite';
 import reportWebVitals from './reportWebVitals';
+import StudentProvider from './contexts/StudentCon';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StudentProvider>
+      <App />
+    </StudentProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

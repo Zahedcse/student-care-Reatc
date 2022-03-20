@@ -3,7 +3,7 @@ import AddCourse from "../components/AddCourse";
 import AddStudent from "../components/AddStudent";
 import AddTrainer from "../components/AddTrainer";
 import Courses from "../components/Courses";
-import AllStudent from "../components/Home";
+import AllStudent from "../components/AllStu";
 import Trainers from "../components/Trainers";
 
 const Router = () => {
