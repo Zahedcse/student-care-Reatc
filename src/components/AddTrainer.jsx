@@ -1,11 +1,11 @@
 import Nav from "./Nav";
-import {useContext, useState} from 'react'
+import {useContext} from 'react'
 import { StudentContext } from "../contexts/StudentCon";
 import {Link} from 'react-router-dom'
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AddTrainer = () => {
-    const [isEditable, setIsEditable] = useState(false)
-    const [ editedStudent , setEditedStudent ] = useState(null)
+    // const [isEditable, setIsEditable] = useState(false)
+    // const [ editedStudent , setEditedStudent ] = useState(null)
 
     const valueObject = useContext(StudentContext)
 
@@ -25,36 +25,7 @@ const AddTrainer = () => {
         valueObject.setAllValues('', '', '')
         console.log(newTrainer);
     }
-
-    // const editHandler = (e) => {
-    //     e.preventDefault()
-    //     setIsEditable(true)
-    //     setEditedStudent(e.target.name)
-    // }
-
-    // const editStudentHandler = (e) => {
-    //     e.preventDefault()
-    //     const newStudent = {
-    //         id: Date.now(),
-    //         name: valueObject.allValues.name,
-    //         address: valueObject.allValues.address,
-    //         phone: valueObject.allValues.phone,
-    //         course: valueObject.allValues.course,
-    //         trainer: valueObject.allValues.trainer
-    //     }
-    //     const newStudentList = valueObject.studentList.map(student => {
-    //         if (student.id === editedStudent) {
-    //             return newStudent
-    //         }
-    //         return student
-    //     })
-    //     valueObject.setStudentList(newStudentList)
-    //     valueObject.setAllValues('', '', '', '', '')
-    //     setIsEditable(false)
-    // }
-    
-
-    
+   
     return (
         <div className="m-7 bg-slate-100 h-screen" >
             <Nav/>

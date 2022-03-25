@@ -24,7 +24,8 @@ const StudentProvider = (props) => {
     })
     const [studentList, setStudentList] = useState([]);
     
-    
+    const [isEditable, setIsEditable] = useState(false)
+    const [ editedTrainer , setEditedTrainer ] = useState(null)
     const valueObject = {
         allValues,
         trainerList,
@@ -37,7 +38,11 @@ const StudentProvider = (props) => {
         student,
         setStudent,
         studentList,
-        setStudentList
+        setStudentList,
+        isEditable,
+        setIsEditable,
+        editedTrainer,
+        setEditedTrainer
     }
 
     return (

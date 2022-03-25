@@ -5,7 +5,12 @@ import { StudentContext } from "../contexts/StudentCon";
 import Nav from "./Nav";
 
 const Trainers = () => {
-    const {trainerList} = useContext(StudentContext)
+    const { trainerList , setTrainerList } = useContext(StudentContext)
+    const deleteHandler = (e) => {
+        e.preventDefault()
+        const newTrainerList = trainerList.filter(trainer => trainer.id !== e.target.name)
+        setTrainerList(newTrainerList)
+    }
     return (
         <div className="m-7 bg-slate-100 h-screen">
             <Nav/>
@@ -53,7 +58,7 @@ const Trainers = () => {
                                         </td>
                                         <td class="py-4 px-6 text-sm font-medium text-center whitespace-nowrap">
                                             <a type="button" class="btn-edit">Edit</a>
-                                            <a type="button" class="btn-delete">Delete</a>
+                                            <a type="button" class="btn-delete" onClick={(e)=>deleteHandler(e)}>Delete</a>
                                         </td>
                                             </tr>
                                     ))
